@@ -60,7 +60,7 @@ let functionWithCallback = (param, callback) => {
 functionWithCallback("numero", callback);
 
 // exemplo de callback
-setTimeout(callback(), 3000);
+setTimeout(callback, 3000);
 
 // Promise - Executa codigo apos um caso;
 // é um objeto que possui como param Resolve e Reject
@@ -71,7 +71,7 @@ const promessa = new Promise((resolve, reject) => {
     resolve("ok");
   } else {
     // caso de errado
-    reject(new Error());
+    reject("nao ok");
   }
 });
 
@@ -87,8 +87,23 @@ const promessa2 = new Promise((resolve, reject) => {
   setTimeout(resolve, 3000, "testando");
 });
 
-Promisse.all([promessa, promessa2]).then((message) => {
+Promise.all([promessa, promessa2]).then((message) => {
   console.log(message);
 });
 
 // async await
+
+// cria um funçao que espera outra funçao ser realizada
+
+async function espera() {
+  setTimeout(() => {
+    return "alkabar";
+  }, 2000);
+}
+
+async function obterValor() {
+  let valor = await espera();
+  console.log("Valor é: " + valor);
+}
+
+// console.log(obterValor());
