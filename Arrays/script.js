@@ -69,3 +69,15 @@ function map() {
   console.log(total);
 }
 // map();
+
+// ==========REDUCE=========//
+
+// reduz o array a um unico valor
+function reduce() {
+  // é possivel passar um terceiro parametro que seria o equivalente ao indice
+  return arr.reduce((acumulador, numeroAtual) => {
+    return acumulador + numeroAtual;
+  }, 0);
+  // este zero é um valor inicial, podendo ser qualquer outro valor
+}
+console.log(reduce());
