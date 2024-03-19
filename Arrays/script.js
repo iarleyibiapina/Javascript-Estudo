@@ -31,13 +31,41 @@ function posicao() {
 
 // uma função executa outra;
 // uma funçao recebe como param uma funçao para executar outra função
-chamar = () => {
-  console.log(arr);
-};
+function callback() {
+  chamar = () => {
+    console.log(arr);
+  };
 
-existe = (vazio) => {
-  // se nao existe, executa funçao
-  vazio ?? chamar();
-};
-// existe(12);
-existe();
+  existe = (vazio) => {
+    // se nao existe, executa funçao
+    vazio ?? chamar();
+  };
+  // existe(12);
+  existe();
+}
+// callback();
+
+// ==========MAP=========//
+
+// CRIA uma cópia de um array, mas com uma função modificando seus valores.
+function map() {
+  let total = 0;
+  const arrTwo = arr.map((elemento) => {
+    // aplica uma logica para cada elemento
+    // return (total += elemento);
+    //   return (elemento += elemento);
+    // total += elemento;
+  });
+
+  const pegandoValoresDoArrayAntigo = arr.map(
+    (valor, indice, arrayOriginals) => {
+      // algum codigo aqui
+    }
+  );
+
+  // se usar return a ação vai ser aplicada para cada elemetno;
+  // se nao usar return a ação vai 'acumular' os elementos retornando um unico valor;
+  console.log(arrTwo);
+  console.log(total);
+}
+// map();
