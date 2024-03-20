@@ -199,3 +199,22 @@ const userReduce = reduce((total, user) => {
 }, 0);
 // console.log(reduce());
 //=============================================================================//
+//
+//===================SOME==================//
+// some(), retorna boolenao caso parametro passado, condiz com algum item no array
+
+const userFal = data.some((user) => {
+  return user.active === false;
+  // retorna verdadeiro, caso usuario falso no array.
+});
+//=============================================================================//
+//
+//===================EVERY==================//
+// every() , parecido com o some, porem retorna verdadeiro quando TODOS os
+// itens passar na condição
+
+const userAct = data.every((user) => {
+  return user.active === true;
+  // retorna falso, pois tem alguns usuarios false, precisa ser todos.
+});
+//=============================================================================//
