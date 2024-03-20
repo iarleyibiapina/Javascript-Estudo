@@ -54,6 +54,34 @@ const data = [
   },
 ];
 //=============================================================================//
+// forma:
+//===================O==================//
+//=============================================================================//
+//
+//===================FIND==================//
+//Find percorre lista, e quando bater com  condição, retorna o primeiro
+// objeto encontrado; (pegar 1)
+// vai retornar dados quando idade maior que 27;
+function find() {
+  const user = data.find((elemento) => {
+    return elemento.age >= 27;
+  });
+  return user;
+}
+// console.log(find());
+//=============================================================================//
+//
+//===================FIND INDEX==================//
+// findIndex, retorna a posição, com base no parametro.
+// retorna e finaliza no primeiro padrão
+function findIndex() {
+  return data.findIndex((elemento) => {
+    return elemento.name === "Fulano";
+    // deve retornar '2'
+  });
+}
+console.log(findIndex());
+//=============================================================================//
 //
 //===================BÁSICO==================//
 // cada posição é um indice
