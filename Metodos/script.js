@@ -17,7 +17,7 @@ function strings() {
   console.log(posicaoLetra);
   console.log(cortarString);
 }
-strings();
+// strings();
 //=============================================================================//
 //
 //===================ARRAYS==================//
@@ -59,6 +59,24 @@ function defObjeto() {
   console.log(objeto["acessandoDeOutraForma"]);
   console.log(objeto.funcaoDentroObjeto(2));
 }
-defObjeto();
+// defObjeto();
+//=============================================================================//
+//
+//===================DESCONSTRUIÇAO==================//
+// Uma forma de 'extrair' uma chave do objeto ou array e tranformar em uma variavel
+// muito util quando for utilizar apenas 1 variavel em um objeto enorme.
+
+let { valor, funcaoDentroObjeto } = objeto;
+
+// tambem funciona com arrays
+let [a, b] = array;
+// a posicao das variaveis vai depender das posicao do array
+
+function desConstroi() {
+  // esta funçao vai dar 'erro' pois nao vai haver uma referencia
+  console.log(valor, funcaoDentroObjeto());
+  console.log(a, b);
+}
+desConstroi();
 //=============================================================================//
 //
