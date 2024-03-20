@@ -19,3 +19,19 @@ function strings() {
 }
 strings();
 //=============================================================================//
+//
+//===================ARRAYS==================//
+
+// .length para pegar o tamanho do array
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// array[n] - n é a posicao do array começando por 0;
+// array[array.length - 1] - Ultima posicao ou (pega ultimo elemento) de uma lista;
+
+array.push("novo item adicionado"); // adiciona um elemento ao fim do array
+array.pop("remove"); // remove   um elemento ao fim do array
+array.unshift("item"); // insere   elemento no inicio do array
+array.shift("item"); // remove   elemento no inicio do array
+
+//=============================================================================//
+//
