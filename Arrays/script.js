@@ -95,6 +95,8 @@ function posicao() {
   // metodo especial para pegar ultimo elemento -1 - ultimo
   console.log(arr.at(-1));
   // -3 -2 -1 0 1 2 3 | negativo seria de traz para frente.
+  console.log(arr.reverse());
+  // inverte a ordem do array
 }
 // posicao();
 //=============================================================================//
@@ -130,7 +132,9 @@ function callback() {
 //
 //===================MAP==================//
 
-// CRIA uma cópia de um array, mas com uma função modificando seus valores.
+// Percorre um array
+// CRIA uma cópia de um array, mas com uma função acessando cada valor do array original.
+// Pode alterar o valor do array
 function map() {
   let total = 0;
   const arrTwo = arr.map((elemento) => {
@@ -151,6 +155,25 @@ function map() {
   console.log(arrTwo);
   console.log(total);
 }
+
+const users = data.map((user, index) => {
+  // return "Olá " + user.name
+  // retorna o nome de cada item.
+
+  // tambem pode alterar o valor do array original
+  if (user.salary <= 3000) {
+    user.salary += 900;
+    user.bonus++;
+  }
+
+  return {
+    name: user.name,
+    salary: user.salary,
+    bonus: user.bonus,
+  };
+});
+// vai retornar essa nova formatação e alteração feita tambem no original.
+
 // map();
 //=============================================================================//
 //
