@@ -46,7 +46,7 @@ const ultimoFilho = elemento.lastChild;
 
 // criando novo elemento
 const novoElemento = document.createElement("div");
-// adiciona texto
+// adiciona texto - altera apenas o conteudo dentro da tag
 novoElemento.textContent = "texto";
 // adiciona clase
 novoElemento.className = "clasi";
@@ -93,4 +93,10 @@ document.querySelector("#elementoPai").addEventListener("click", (evento) => {
   if (event.target.matches(".classeDosFilhos")) {
     // evento delegado para o filhos
   }
+});
+
+const texto = document.querySelector(".li");
+texto.forEach((text) => {
+  // acessando o valor do elemento com textContent
+  console.log(text.textContent.toUpperCase());
 });
