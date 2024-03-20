@@ -1,9 +1,62 @@
+// ALGUNS DADOS MOCADOS;
 const arr = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
+const data = [
+  {
+    name: "SUJEITO",
+    age: 23,
+    salary: 4000,
+    active: true,
+    team: "front",
+    bonus: 0,
+  },
+  {
+    name: "Jose",
+    age: 16,
+    salary: 3000,
+    active: false,
+    team: "front",
+    bonus: 0,
+  },
+  {
+    name: "Fulano",
+    age: 41,
+    salary: 6000,
+    active: true,
+    team: "back",
+    bonus: 0,
+  },
+  {
+    name: "Ciclano",
+    age: 30,
+    salary: 4000,
+    active: false,
+    team: "mobile",
+    bonus: 0,
+  },
+  {
+    name: "Beltrano",
+    age: 61,
+    salary: 3000,
+    active: true,
+    team: "back",
+    bonus: 0,
+  },
+  {
+    name: "Santano",
+    age: 18,
+    salary: 2000,
+    active: true,
+    team: "mobile",
+    bonus: 0,
+  },
+];
+//=============================================================================//
+//
+//===================BÁSICO==================//
 // cada posição é um indice
-
 function posicao() {
   // a primeira posiçao é 0
   console.log(arr[0]);
@@ -16,8 +69,9 @@ function posicao() {
   // -3 -2 -1 0 1 2 3 | negativo seria de traz para frente.
 }
 // posicao();
-
-// ============PROTOTYPE============= //
+//=============================================================================//
+//
+//===================PROTOTYPE==================//
 // prototype - metodos do objeto, pode ser visto em um nagevador.
 // array possui um prototype e objeto possui um prototype.
 
@@ -27,7 +81,7 @@ function posicao() {
 // Array.prototype.novaFunc = function () {}
 // arr.novaFunc()
 
-// ==========CALLBACK=========//
+//===================CALLBACK==================//
 
 // uma função executa outra;
 // uma funçao recebe como param uma funçao para executar outra função
@@ -44,8 +98,9 @@ function callback() {
   existe();
 }
 // callback();
-
-// ==========MAP=========//
+//=============================================================================//
+//
+//===================MAP==================//
 
 // CRIA uma cópia de um array, mas com uma função modificando seus valores.
 function map() {
@@ -69,10 +124,15 @@ function map() {
   console.log(total);
 }
 // map();
+//=============================================================================//
+//
+//===================REDUCE==================//
 
-// ==========REDUCE=========//
-
-// reduz o array a um unico valor
+// Reduz o array a um unico valor
+// Reduzir o array (ou retornar apenas um valor),
+// Primeiro parametro - Valor inicial, podendo ser um {} ou [] - Qualquer dado
+// Segundo  parametro - Valor atual ou temporario, servindo de auxiliar do Primeiro param
+// Terceiro parametro - Array original
 function reduce() {
   // é possivel passar um terceiro parametro que seria o equivalente ao indice
   return arr.reduce((acumulador, numeroAtual) => {
@@ -80,4 +140,11 @@ function reduce() {
   }, 0);
   // este zero é um valor inicial, podendo ser qualquer outro valor
 }
-console.log(reduce());
+
+// Outro exemplo...
+const userReduce = reduce((total, user) => {
+  return (total += user.salary);
+  // retorna falso, pois tem alguns usuarios false, precisa ser todos.
+}, 0);
+// console.log(reduce());
+//=============================================================================//
