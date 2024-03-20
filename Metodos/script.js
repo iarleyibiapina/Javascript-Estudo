@@ -35,3 +35,30 @@ array.shift("item"); // remove   elemento no inicio do array
 
 //=============================================================================//
 //
+//===================OBJETOS==================//
+// definidos por {}
+// possuem chaves e valores
+// sao acessador por objeto.chave na maioria das vezes
+// ou
+// objeto['chave'] - nesse caso, apenas quando chave é string
+// podem ter funções dentro, sendo referenciados por this
+
+const objeto = {
+  chave: 1,
+  produto: "string",
+  valor: 100,
+  acessandoDeOutraForma: "colchete",
+  funcaoDentroObjeto(param) {
+    return this.valor * param;
+  },
+};
+
+function defObjeto() {
+  console.log(objeto);
+  console.log(objeto.chave);
+  console.log(objeto["acessandoDeOutraForma"]);
+  console.log(objeto.funcaoDentroObjeto(2));
+}
+defObjeto();
+//=============================================================================//
+//
