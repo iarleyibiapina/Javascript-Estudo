@@ -83,6 +83,18 @@ function exibe(){
 // extra: as duas são consts, mas nao estou alterando seu valor apenas passando o parametro
 //=============================================================================//
 // 
+//====================RETURN==================//
+// é possivel ter funçoes que retornam algo, como na primeira funçao
+// ou funçoes que executam algo, mas nao retornam um dado.
+// geralmente as funçoes que nao executam nada, são utilizadas para executar
+// alguma tarefa, são funçoes que precisam de outra funçao como 'gatilho'
+// ou que novamente tem pequenas funçoes e podem ser chamadas por meio de outras funçoes
+// como usado nas linhas 69 a 71
+
+// por meio do return tambem é possivel jogar seus resultados em uma variavel ou parametros 
+// de outras funções.
+//=============================================================================//
+// 
 //===================NOMEAÇÃO==================//
 /* 
  -camelCase
@@ -96,5 +108,4 @@ function exibe(){
   -funçoes devem SEMPRE fazer UMA função, reduzir a função a um unico papel
   -reduzir tambem o numero de PARAMETROS para somente 1 quando possivel
   -modularizar e separar funçoes para tentar resolver os padroes acima citados.
-
 */
