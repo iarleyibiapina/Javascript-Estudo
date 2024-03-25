@@ -14,5 +14,12 @@ let outraVariavel = 'b';
 const naoAlteraValor = 10;
 // console.log(naoAlteraValor++); // não é possivel;
 //=============================================================================//
-
-
+//
+//===================TIPOS PRIMITIVOS==================//
+let nnnn = "string"; // string
+let iiii = 20;       // integer
+let aaaa = true;     // boolean
+let oooo = [];       // array
+let kkkk = {};       // object
+let cccc;            // undefined
+let uuuu = null      // null
