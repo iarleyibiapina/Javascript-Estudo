@@ -1,18 +1,29 @@
 //===================ALGUNS METODOS==================//
 //
 //===================STRINGS==================//
+// Declarando uma string
+// const algumaString = "alguma string"; - tipo primitivo
+// const algumaOutraString = new String('alguma outra string'); - tipo objeto
+// tanto em tipo string como objeto, a string possui métodos e podemos utilizar eles
+
 let algumaString = "alguma.coisa";
 
 let tamanhoString = algumaString.length; // .length, pega o tamanho da string
 let divideString = algumaString.split("."); // .split(" "), separa elementos e cria um array onde o parametro é o identificador da divisão, ou seja, onde houver "." vai ser dividido os elementos
 let posicaoLetra = algumaString.indexOf("coisa"); // .indexOf("letra"), vai procurar em que posição de uma string o parametro é achado, por exemplo, se "um letra" retorna 4, pois é como se cada caracter fosse um index e a palavra letra começa no index 4
 let cortarString = algumaString.slice(2, 5); // .slice(começo, fim), é uma forma de CORTAR uma palavra, onde primeiro parametro é o inicio e o segundo o fim.
+let existe = algumaString.includes("alguma"); // .includes retorna bool se existe essa string no parametro em outra string
+let comecaCom = algumaString.startsWith("alguma"); // .startWith retorna bool se a string inicia com o param passado
+let terminaCom = algumaString.endsWith("alguma"); // .endsWith retorna bool se a string termina com o param passado
+let eliminaEspacos = algumaString.trim(); // .trim() tira espaços no começo e fim
 
 function strings() {
+  console.log(algumaString[1]);
   console.log(tamanhoString);
   console.log(divideString);
   console.log(posicaoLetra);
   console.log(cortarString);
+  console.log(existe);
 }
 // strings();
 //=============================================================================//
