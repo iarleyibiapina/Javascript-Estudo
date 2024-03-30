@@ -50,6 +50,15 @@ const objeto = {
   },
 };
 
+// mesmo sendo Const, é possivel adicionar metodos a objetos
+objeto.adiciona = () => {
+  console.log("adiciona metodo");
+}
+objeto.adicionaChar = "L";
+// e tambem é possivel remover estes metodos
+delete objeto.adiciona;
+delete objeto.adicionaChar;
+
 function defObjeto() {
   console.log(objeto);
   console.log(objeto.chave);
@@ -74,6 +83,6 @@ function desConstroi() {
   console.log(valor, funcaoDentroObjeto());
   console.log(a, b);
 }
-desConstroi();
+// desConstroi();
 //=============================================================================//
 //
