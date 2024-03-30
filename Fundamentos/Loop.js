@@ -90,5 +90,31 @@ function execDoWhile(){
     console.log(`O numero de ciclos foram: ${ciclo}`);
     console.log(`A chave para o while agora é: ${tt}`);
 }
-    execDoWhile();
+// execDoWhile();
 //=============================================================================//
+//
+//===================FOR IN==================//
+// faz iteração em um objeto ou array, por meio das chaves
+const pessoa = {
+    nome: "creudo",
+    idade: 20,
+    cidade: "for",
+}
+function execForIn(){
+    for (let chave in pessoa) {
+        console.log(`Chave: ${chave} e valor é ${pessoa[chave]}`);	
+    }
+}
+// execForIn();
+//=============================================================================//
+//
+//===================FOR OF==================//
+//  faz iteração em um array ou objeto por meio do seu valor
+const anotherArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+
+function execForOf(){
+    for (let chave of anotherArr) {
+        console.log(`Valor é : ${chave}`);	
+    }
+}
+execForOf();
