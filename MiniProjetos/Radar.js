@@ -11,15 +11,17 @@ let pontosCarteira = 0;
 let velocidade = radar(56.867);
 function radar(velocidade)
 {
+    const velocidadeMaxima = 50;
+    const quilometroPorPonto = 5;
     // arredondanddo velocidade - para abaixo de .5
     velocidade = Math.floor(velocidade);
     // 
-    if(velocidade <= 50) return "Velocidade abaixo do permitido";
+    if(velocidade <= velocidadeMaxima) return "Velocidade abaixo do permitido";
     //
-    let velocidadeAcima = velocidade - 50;
+    let velocidadeAcima = velocidade - velocidadeMaxima;
     console.log(`Velocidade ${velocidadeAcima}Km/h acima do permitido`);
     //
-    let definirPontos = Math.floor((velocidadeAcima / 5) * 2);
+    let definirPontos = Math.floor((velocidadeAcima / quilometroPorPonto) * 2);
     pontosCarteira += definirPontos;
     console.log(`Será aplicado ${definirPontos} pontos na carteira`);
     //
