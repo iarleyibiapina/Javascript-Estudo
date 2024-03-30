@@ -79,3 +79,20 @@ function execAll(){
     console.log(`Valor original é true ${!tt}`);
 }
 // execAll();
+//=============================================================================//
+//
+//===================Truthy Or Falsy==================//
+
+// São falsys:
+/*
+undefined, null, 0, false, '' (strings ou variaveis vazias), NaN
+*/
+
+// São Trythy:
+// tudo o que não se enquqadra como falsy
+
+// false || 'string' = "string"
+// false || truthy = truthy
+// false || 1 = 1 
+// false || truthy = truthy
+
