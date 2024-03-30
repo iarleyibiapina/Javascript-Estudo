@@ -68,6 +68,24 @@ function defObjeto() {
 // defObjeto();
 //=============================================================================//
 //
+//===================CLONANDO OBJETOS==================//
+// Copia um objeto para um novo objeto, onde primeiro param é o nobo objeto
+// o segundo é o objeto a ser copiado
+
+// pode ser adicionado atributos ou metodos a este objeto
+// const copiaObjeto = Object.assign({}, objeto); copiar
+const copiaObjeto = Object.assign({
+  umNovoAtrr: "umNovoAtrr",
+  umNovoMetodo: ()=> {return 1}
+}, objeto); // copia e adiciona dados
+
+//===================SPREAD==================//
+// indentificado por ...
+// tambem faz a cópia de um objeto, podendo adicionar valores
+const outraCopia = {... objeto};
+
+//=============================================================================//
+//
 //===================DESCONSTRUIÇAO==================//
 // Uma forma de 'extrair' uma chave do objeto ou array e tranformar em uma variavel
 // muito util quando for utilizar apenas 1 variavel em um objeto enorme.
