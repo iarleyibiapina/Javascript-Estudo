@@ -12,6 +12,9 @@ let dia = "segunda";
 if(tt){
     return "primeiro caso";
 }
+// este if tambem pode ser feito em uma linha sem ser o ternario
+
+if(tt) return "segundo caso";
 
 // if(dia == "segunda"){
 //     return "dia util";
