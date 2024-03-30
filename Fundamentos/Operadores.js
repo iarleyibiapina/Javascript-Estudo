@@ -40,8 +40,42 @@ salario === "20" ? true : false; // false
 
 // CONDIÇÃO ? 'TRUE' : 'FALSE';
 let compara = salario == 20  ? "Sim é do tipo number" : "Não é do tipo number";
-console.log(compara);
+// console.log(compara);
 //=============================================================================//
 //
+//===================LÓGICOS==================//
+//  AND OR NOT
+let ff = false;
+let tt = true;
+let outro = ff && ff;
+//  && and
+let execAnd = (paramUm, paramDois) => {
+    if ( paramUm && paramDois ) {
+        return "Os dois são true"
+    }
+    return "Um ou Dois é false"
+}
 
+// || OR
+outro = ff || tt;
 
+let execOr = (paramUm, paramDois) => {
+    if ( paramUm || paramDois ) {
+        return "Um ou Dois são true"
+    }
+    return "Os dois são false"
+}
+
+// ! NOT
+// inverte valor da variavel ou condição
+// (!true) = false
+
+function execAll(){
+    console.log(execAnd(ff, tt));
+    console.log(execAnd(tt, tt));
+    console.log(execOr(ff, tt));
+    console.log(execOr(ff, ff));
+    console.log(`Valor original é false ${!ff}`);
+    console.log(`Valor original é true ${!tt}`);
+}
+// execAll();
