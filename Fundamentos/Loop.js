@@ -117,4 +117,10 @@ function execForOf(){
         console.log(`Valor é : ${chave}`);	
     }
 }
-execForOf();
+// execForOf();
+//=============================================================================//
+//
+//===================FOREACH==================//
+anotherArr.forEach((valor, indice) => {
+    console.log(`Valor é : ${valor}, e indice : ${indice}`);
+});
