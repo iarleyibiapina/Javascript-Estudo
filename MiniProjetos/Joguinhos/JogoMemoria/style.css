@@ -1,0 +1,10 @@
+#grid {
+    max-width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img{
+    max-width: 100px;
+}
