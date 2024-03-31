@@ -32,6 +32,7 @@ function strings() {
 
 // .length para pegar o tamanho do array
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let outroArray = [1];
 
 // array[n] - n é a posicao do array começando por 0;
 // array[array.length - 1] - Ultima posicao ou (pega ultimo elemento) de uma lista;
@@ -40,6 +41,26 @@ array.push("novo item adicionado"); // adiciona um elemento ao fim do array
 array.pop("remove"); // remove   um elemento ao fim do array
 array.unshift("item"); // insere   elemento no inicio do array
 array.shift("item"); // remove   elemento no inicio do array
+array.splice(1,3,"valor_novo"); // insere elemento em uma posicao do array, defindo o começo, fim, e valor a ser adicionado no parametro
+array.indexOf(10); // retorna o indice do valor encontrado - retorna -1 caso não achar
+array.lastIndexOf(3); // em um array com dados repetidos, retorna a posição do ultimo elemento encontrado - retorna -1 se não achar
+array.includes(2); //retorna um bool se achar o valor ou não
+let novoArrayUnido = array.concat(outroArray); // une dois arrays
+// spread para copiar arrays
+let copiaArray = [...array, "um novo valor", ...outroArray, "um outro valor"];
+
+// encontrando objetos em um array - por meio do metodo find()
+// usa uma callback
+array.find((element) => {
+  return element.chave === "a";
+});
+// em um array contendo um objeto, se houver uma chave com valor "a" ele retorna true
+
+// apagando um array
+// array.length = 0 - metodo 1 - o melhor metodo
+// array.splice(0,array.length) - metodo 2 
+// usar um while (array.length > 0) e dentro da funçao um array.pop() - metodo 3
+
 
 //=============================================================================//
 //
