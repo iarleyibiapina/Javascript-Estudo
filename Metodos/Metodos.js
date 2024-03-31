@@ -48,6 +48,8 @@ array.includes(2); //retorna um bool se achar o valor ou não
 let novoArrayUnido = array.concat(outroArray); // une dois arrays
 // spread para copiar arrays
 let copiaArray = [...array, "um novo valor", ...outroArray, "um outro valor"];
+array.join("."); // converte array em uma string unindo por meio do parametro
+algumaString.split("."); // converte uma string em um arra separando pelo valor do parametro
 
 // encontrando objetos em um array - por meio do metodo find()
 // usa uma callback
