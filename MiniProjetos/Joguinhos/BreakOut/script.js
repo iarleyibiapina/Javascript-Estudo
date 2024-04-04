@@ -121,7 +121,7 @@ function moveBall()
     checkForCollision();
 }
 
-timerId = setInterval(moveBall, 30);
+timerId = setInterval(moveBall, 20);
 
 function checkForCollision()
 {
@@ -163,7 +163,6 @@ function checkForCollision()
         (ballCurrentPosition[1] > currentPosition[1] && ballCurrentPosition[1] < currentPosition[1] + blockHeight) 
     )
     {
-        console.log("d");
         changeDirection();
     }
 
